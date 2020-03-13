@@ -40,7 +40,7 @@ func (s *HTTPSSuite) TestWithSNIConfigHandshake(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "snitest.com",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))
@@ -288,7 +288,7 @@ func (s *HTTPSSuite) TestWithSNIStrictNotMatchedRequest(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "snitest.org",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	// Connection with no matching certificate should fail
 	_, err = tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
@@ -314,7 +314,7 @@ func (s *HTTPSSuite) TestWithDefaultCertificate(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "snitest.org",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))
@@ -349,7 +349,7 @@ func (s *HTTPSSuite) TestWithDefaultCertificateNoSNI(c *check.C) {
 
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))
@@ -386,7 +386,7 @@ func (s *HTTPSSuite) TestWithOverlappingStaticCertificate(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "www.snitest.com",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))
@@ -423,7 +423,7 @@ func (s *HTTPSSuite) TestWithOverlappingDynamicCertificate(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "www.snitest.com",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))
@@ -1093,7 +1093,7 @@ func (s *HTTPSSuite) TestWithSNIDynamicCaseInsensitive(c *check.C) {
 	tlsConfig := &tls.Config{
 		InsecureSkipVerify: true,
 		ServerName:         "bar.www.snitest.com",
-		NextProtos:         []string{"h2", "http/1.1"},
+		NextProtos:         []string{"h2", "spdy/3.1", "http/1.1"},
 	}
 	conn, err := tls.Dial("tcp", "127.0.0.1:4443", tlsConfig)
 	c.Assert(err, checker.IsNil, check.Commentf("failed to connect to server"))

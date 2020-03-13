@@ -94,6 +94,8 @@ github.com/akamai/AkamaiOPEN-edgegrid-golang v0.9.0 h1:rXPPPxDA4GCPN0YWwyVHMzcxV
 github.com/akamai/AkamaiOPEN-edgegrid-golang v0.9.0/go.mod h1:zpDJeKyp9ScW4NNrbdr+Eyxvry3ilGPewKoXw3XGN1k=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
+github.com/alejandroEsc/oxy v1.0.0 h1:ZKju/ZdIysUJXJ+2vRdl9KNRveryfd0+nBKPyj8AyPA=
+github.com/alejandroEsc/oxy v1.0.0/go.mod h1:6EXgOAl6CRa46/2ZGcDJKf3ywJUp5WtT7vSlGSkvecI=
 github.com/aliyun/alibaba-cloud-sdk-go v0.0.0-20190808125512-07798873deee h1:NYqDBPkhVYt68W3yoGoRRi32i3MLx2ey7SFkJ1v/UI0=
 github.com/aliyun/alibaba-cloud-sdk-go v0.0.0-20190808125512-07798873deee/go.mod h1:myCDvQSzCW+wB1WAlocEru4wMGJxy+vlxHdhegi1CDQ=
 github.com/aliyun/aliyun-oss-go-sdk v0.0.0-20190307165228-86c17b95fcd5/go.mod h1:T/Aws4fEfogEE9v+HPhhw+CntffsBHJ8nXQCwKr0/g8=
@@ -701,8 +703,6 @@ github.com/urfave/cli v0.0.0-20171014202726-7bc6a0acffa5/go.mod h1:70zkFmudgCuE/
 github.com/urfave/cli v1.22.1/go.mod h1:Gos4lmkARVdJ6EkW0WaNv/tZAAMe9V7XWyB60NtXRu0=
 github.com/vdemeester/shakers v0.1.0 h1:K+n9sSyUCg2ywmZkv+3c7vsYZfivcfKhMh8kRxCrONM=
 github.com/vdemeester/shakers v0.1.0/go.mod h1:IZ1HHynUOQt32iQ3rvAeVddXLd19h/6LWiKsh9RZtAQ=
-github.com/vulcand/oxy v1.0.0 h1:7vL5/pjDFzHGbtBEhmlHITUi6KLH4xXTDF33/wrdRKw=
-github.com/vulcand/oxy v1.0.0/go.mod h1:6EXgOAl6CRa46/2ZGcDJKf3ywJUp5WtT7vSlGSkvecI=
 github.com/vulcand/predicate v1.1.0 h1:Gq/uWopa4rx/tnZu2opOSBqHK63Yqlou/SzrbwdJiNg=
 github.com/vulcand/predicate v1.1.0/go.mod h1:mlccC5IRBoc2cIFmCB8ZM62I3VDb6p2GXESMHa3CnZg=
 github.com/vultr/govultr v0.1.4 h1:UnNMixYFVO0p80itc8PcweoVENyo1PasfvwKhoasR9U=
